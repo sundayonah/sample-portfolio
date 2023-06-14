@@ -1,0 +1,68 @@
+.skill__container {
+  display: grid;
+}
+
+.skill__content {
+  width: auto;
+  height: auto;
+  margin-left: 2rem;
+  grid-gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.skill__content p {
+  color: var(--color-light);
+}
+
+.card {
+  height: 10rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(31, 60, 60);
+  grid-column: span 3;
+  padding: 5rem;
+  box-shadow: 0.7rem 0.7rem 0rem rgb(0, 0, 0);
+}
+
+.card p {
+  line-height: 2rem;
+  /* display: none; */
+}
+
+.card.active p {
+  display: block;
+}
+
+.card.active {
+  grid-column: 1 / span 6;
+  grid-row: 1;
+  order: 0;
+  height: auto;
+}
+
+.card.is-inactive {
+  grid-column: span 2;
+}
+
+/* -------------------MEDIA QUERIES (MEDIUM DEVICES)------------- */
+@media screen and (max-width: 1024px) {
+  .skill__container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* -------------------MEDIA QUERIES (MEDIUM DEVICES)------------- */
+@media screen and (max-width: 600px) {
+  .skill__container {
+    width: var(--container-width-sm);
+    font-size: small;
+    color: aquamarine;
+    justify-content: center;
+  }
+}
